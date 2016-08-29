@@ -7,10 +7,10 @@ public class PhoneBook {
 		ArrayList<String> phoneNum1 = new ArrayList<String>(2);
 		ArrayList<String> phoneNum2 = new ArrayList<String>(1);
 		ArrayList<String> phoneNum3 = new ArrayList<String>(3);
-		// Помещаем записи в телефонную книгу
-		phoneBook.put("Иванов И.И.",phoneNum1);
-		phoneBook.put("Петров П.П.",phoneNum2);
-		phoneBook.put("Сидоров С.С.", phoneNum3);
+		// РќР°РїРѕР»РЅСЏРµРј РЅР°С€Сѓ С‚РµР»РµС„РѕРЅРЅСѓСЋ РєРЅРёРіСѓ 
+		phoneBook.put("РРІР°РЅРѕРІ Р.Р.",phoneNum1);
+		phoneBook.put("РџРµС‚СЂРѕРІ Рџ.Рџ.",phoneNum2);
+		phoneBook.put("РЎРёРґРѕСЂРѕРІ РЎ.РЎ.", phoneNum3);
 		
 		phoneNum1.add("+8 800 2000 500");
 		phoneNum1.add("+8 800 2000 600");
@@ -20,16 +20,16 @@ public class PhoneBook {
 		phoneNum3.add("+8 800 2000 800");
 		phoneNum3.add("+8 800 2000 900");
 		phoneNum3.add("+8 800 2000 000");
-		System.out.println("Список контактов:");
-		// Получаем набор элементов
+		System.out.println("РЎРїРёСЃРѕРє РєРѕРЅС‚Р°РєС‚РѕРІ:");
+		// // РџРѕРјРµС‰Р°РµРј Р·Р°РїРёСЃРё РІ С‚РµР»РµС„РѕРЅРЅСѓСЋ РєРЅРёРіСѓ
 		Set<Map.Entry<String, ArrayList<String>>> set = phoneBook.entrySet();
-		// Отобразим содержимое
+		// РћС‚РѕР±СЂР°Р¶Р°РµРј Р·Р°РїРёСЃРё РІ РЅР°С€РµР№ С‚РµР»РµС„РѕРЅРЅРѕР№ РєРЅРёРіРµ
 		for (Map.Entry<String, ArrayList<String>> me : set) {
 			System.out.println("\t"+me.getKey());
 		}
-		System.out.println("Для отображения телефонного номера "
-				+ "интересующего вас контакта,\nпожалуйста введите его ФИО.\n"
-				+ "Для выхода из программы нажмите 0");
+		System.out.println("Р”Р»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С‚РµР»РµС„РѕРЅРЅРѕРіРѕ РЅРѕРјРµСЂР° "
+				+ "РёРЅС‚РµСЂРµСЃСѓСЋС‰РµРіРѕ РІР°СЃ РєРѕРЅС‚Р°РєС‚Р°,\nРїРѕР¶Р°Р»СѓР№СЃС‚Р° РІРІРµРґРёС‚Рµ РµРіРѕ Р¤РРћ.\n"
+				+ "Р”Р»СЏ РІС‹С…РѕРґР° РёР· РїСЂРѕРіСЂР°РјРјС‹ РЅР°Р¶РјРёС‚Рµ 0");
 		for(;;){
 			String fio="";
 			in = new Scanner(System.in);
@@ -40,7 +40,7 @@ public class PhoneBook {
 			else if(phoneBook.containsKey(fio))
 				System.out.println(phoneBook.get(fio));
 			else
-				System.out.println("Контакт с таким ФИО отстутствует");
+				System.out.println("РљРѕРЅС‚Р°РєС‚ СЃ С‚Р°РєРёРј Р¤РРћ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚");
 		}
 		in.close();
 	}
